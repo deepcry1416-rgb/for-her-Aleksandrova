@@ -24,6 +24,23 @@
             overflow-x: hidden;
         }
 
+        /* Экран блокировки по дате */
+        #lock-screen {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: var(--bg);
+            display: none; 
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        #lock-screen h1 { color: var(--burgundy); font-size: 2.5rem; }
+
         section {
             display: none;
             width: 100%;
@@ -177,6 +194,14 @@
 </head>
 <body>
 
+    <div id="lock-screen">
+        <h1>🔒 Закрыто</h1>
+        <p style="color: var(--burgundy-light); font-size: 1.2rem;">
+            Приходите позже
+        </p>
+        <div style="font-size: 50px; margin-top: 20px;"></div>
+    </div>
+
     <section id="step1" class="active">
         <h2>Почему ты лучшая... ✨</h2>
         <div id="envelopes-wrapper"></div>
@@ -187,27 +212,27 @@
         <h2>Фотогалерея ❤️</h2>
         <div class="gallery-grid">
             <div class="photo-card">
-                <img src="https://sun9-10.userapi.com/s/v1/ig2/iTcnvIHxap1FeyGoqnf9xTHVUnjGcOCkIPsNUgN_8VhwYIaiCqPQVy5txhuYz2QmPzrpTUhCs5hMlLMRpsjxbgAz.jpg?quality=95&as=32x43,48x64,72x96,108x144,160x213,240x320,360x480,480x640,540x720,640x853,720x960,1080x1440&from=bu&cs=1080x0" alt="1">
+                <img src="https://sun9-10.userapi.com/s/v1/ig2/iTcnvIHxap1FeyGoqnf9xTHVUnjGcOCkIPsNUgN_8VhwYIaiCqPQVy5txhuYz2QmPzrpTUhCs5hMlLMRpsjxbgAz.jpg?quality=95&from=bu&cs=1080x0" alt="1">
                 <div class="photo-desc">Ты у меня самая самая красивая!❤️</div>
             </div>
             <div class="photo-card">
-                <img src="https://sun9-66.userapi.com/s/v1/ig2/U0D5IRqBCSY0Gsor-N387sBhx-Z9KmN7ALP895drDtwVK4CDiEBn2hJ5kzlRPH1hG76iaaR2cwHrcNVgcepvJgkt.jpg?quality=95&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640&from=bu&u=gB9P_56zTTTOMZx3kuch-bwiSlm8szJuk2JRXARO2Z0&cs=640x0" alt="2">
+                <img src="https://sun9-66.userapi.com/s/v1/ig2/U0D5IRqBCSY0Gsor-N387sBhx-Z9KmN7ALP895drDtwVK4CDiEBn2hJ5kzlRPH1hG76iaaR2cwHrcNVgcepvJgkt.jpg?quality=95&from=bu&u=gB9P_56zTTTOMZx3kuch-bwiSlm8szJuk2JRXARO2Z0&cs=640x0" alt="2">
                 <div class="photo-desc">А это одна из наших первых совместных фото ❤️</div>
             </div>
             <div class="photo-card">
-                <img src="https://sun9-41.userapi.com/s/v1/ig2/HgzUCgWq0A-IKnVeKV058MF49ZSj99-KVpkgIBwHC6rOvOiEOwW6QH-GrNrKTDa7c3A7HzSw5KnI7WrD-wO0aP5d.jpg?quality=95&as=32x32,48x48,72x72,108x108,160x160,240x240,360x359,480x479,540x539,640x639,719x718&from=bu&u=wSXB-pN8tCPvm_2MFleHjjqpmXueqqXZpz51Y9FL1Go&cs=719x0" alt="3">
+                <img src="https://sun9-41.userapi.com/s/v1/ig2/HgzUCgWq0A-IKnVeKV058MF49ZSj99-KVpkgIBwHC6rOvOiEOwW6QH-GrNrKTDa7c3A7HzSw5KnI7WrD-wO0aP5d.jpg?quality=95&from=bu&u=wSXB-pN8tCPvm_2MFleHjjqpmXueqqXZpz51Y9FL1Go&cs=719x0" alt="3">
                 <div class="photo-desc">Помнишь ли где было сделано фото с этой красоткой?</div>
             </div>
-             <div class="photo-card">
-                <img src="https://sun9-28.userapi.com/s/v1/ig2/3Ew9bBV9o_vjoTtT1qGbwv81Dcv_M07C-gGX6nXqgYQYtxFfrclGxuMlC9sZzbA3VtRerFNFY9IT5I0a4XrUDzU7.jpg?quality=95&as=32x57,48x85,72x128,108x192,160x284,240x427,360x640,480x853,540x960,640x1138,720x1280,1080x1920&from=bu&cs=1080x0" alt="2">
+            <div class="photo-card">
+                <img src="https://sun9-28.userapi.com/s/v1/ig2/3Ew9bBV9o_vjoTtT1qGbwv81Dcv_M07C-gGX6nXqgYQYtxFfrclGxuMlC9sZzbA3VtRerFNFY9IT5I0a4XrUDzU7.jpg?quality=95&from=bu&cs=1080x0" alt="4">
                 <div class="photo-desc">Я тебя очень сильно люблю! ❤️</div>
             </div>
             <div class="photo-card">
-                <img src="https://sun9-26.userapi.com/s/v1/ig2/Oz-Mfs-p2srlSiIfwSYVMKCNREpQp1jG6Vtg4zvp1mGDC7Kp6gECAc-7bpKE-FIaUj8xJmrNfoYtvq5rdg-hT1SD.jpg?quality=95&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1280x0" alt="2">
+                <img src="https://sun9-26.userapi.com/s/v1/ig2/Oz-Mfs-p2srlSiIfwSYVMKCNREpQp1jG6Vtg4zvp1mGDC7Kp6gECAc-7bpKE-FIaUj8xJmrNfoYtvq5rdg-hT1SD.jpg?quality=95&from=bu&cs=1280x0" alt="5">
                 <div class="photo-desc">Ты у меня самая лучшая ❤️</div>
             </div>
             <div class="photo-card">
-                <img src="https://sun9-60.userapi.com/s/v1/ig2/qxDubveH3G0gF-FiJFjnyV-QdA6Kl51gpJhVz6Ug9frqWumaNZVbZW0mrvgTEmR5JOjzXHGHOOqKrgvdRVpVxMQv.jpg?quality=95&as=32x43,48x64,72x96,108x144,160x214,240x321,360x481,480x642,540x722,640x856,720x963,957x1280&from=bu&u=fzKaPfMXs3TcakUUORqn51m_0y1maiFACpICl1Jhelc&cs=957x0" alt="2">
+                <img src="https://sun9-60.userapi.com/s/v1/ig2/qxDubveH3G0gF-FiJFjnyV-QdA6Kl51gpJhVz6Ug9frqWumaNZVbZW0mrvgTEmR5JOjzXHGHOOqKrgvdRVpVxMQv.jpg?quality=95&from=bu&u=fzKaPfMXs3TcakUUORqn51m_0y1maiFACpICl1Jhelc&cs=957x0" alt="6">
                 <div class="photo-desc">Помнишь ли ты этот день?</div>
             </div>
         </div>
@@ -232,6 +257,19 @@
     </section>
 
 <script>
+    // --- ПРОВЕРКА ДАТЫ ---
+    const now = new Date();
+    const day = now.getDate();
+    const month = now.getMonth(); // Март — это 2
+
+    // Если сегодня ДО 8 марта
+    if (month < 2 || (month === 2 && day < 8)) {
+        document.addEventListener("DOMContentLoaded", () => {
+            document.getElementById('lock-screen').style.display = 'flex';
+            document.getElementById('step1').classList.remove('active');
+        });
+    }
+
     const compliments = [
         "Твоя улыбка делает меня счастливым",
         "Твоя доброта не знает границ",
@@ -243,7 +281,6 @@
     let currentEnv = 0;
     const envWrapper = document.getElementById('envelopes-wrapper');
 
-    // Функция появления конвертов
     function createEnv(index) {
         if (index >= compliments.length) {
             document.getElementById('next-btn').style.display = 'block';
@@ -285,11 +322,10 @@
         spawnItem();
     }
 
-    // Управление (Мышь и Тач)
     const moveHandler = (e) => {
         if(!gameActive) return;
         let rect = gameContainer.getBoundingClientRect();
-        let x = (e.clientX || e.touches[0].clientX) - rect.left;
+        let x = (e.clientX || (e.touches && e.touches[0].clientX)) - rect.left;
         let pos = Math.max(20, Math.min(x, rect.width - 20));
         player.style.left = pos + 'px';
     };
@@ -313,8 +349,6 @@
                 scoreDisplay.innerText = `Счет: ${score}`;
                 item.remove();
                 clearInterval(checkInterval);
-                
-                // УСЛОВИЕ ПОБЕДЫ
                 if (score >= 100) {
                     gameActive = false;
                     document.getElementById('game-ui').style.display = 'none';
@@ -323,11 +357,11 @@
             }
         }, 50);
 
-        setTimeout(() => { item.remove(); clearInterval(checkInterval); }, 2600);
+        setTimeout(() => { if(item.parentNode) item.remove(); clearInterval(checkInterval); }, 2600);
         setTimeout(spawnItem, 700);
     }
 
-    window.onload = () => createEnv(0);
+    window.onload = () => { if (month >= 2 && day >= 8) createEnv(0); };
 </script>
 </body>
 </html>
